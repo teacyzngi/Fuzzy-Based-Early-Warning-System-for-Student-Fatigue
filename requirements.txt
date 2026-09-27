@@ -1,0 +1,7 @@
+streamlit>=1.30
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+# only needed for tests/test_model.py (independent centroid check)
+scipy>=1.10
+pytest>=7.0

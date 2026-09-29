@@ -18,10 +18,10 @@ Students often notice fatigue only after short sleep, piling assignments, heavy 
 
 ## Features
 
-- Fatigue assessment form, returning index, level (LOW / MODERATE / HIGH), main contributing factors and recommended actions
-- Full explanation of every result: membership degrees, fired rules with strengths, aggregated output set with centroid, forward-chaining trace
-- "How the Model Works" page: all membership functions, the 11 fuzzy rules with reasons, the 13 knowledge-base rules, and a sensitivity chart
-- "Survey Data" page: CSV upload, validation, descriptive statistics, input distributions, Spearman correlation with bootstrap CI, category agreement, Cohen's kappa, confusion matrix, download of scored data
+- Multi-page app: Home, Assessment, How the Model Works, Survey Data & Evaluation, About & Limitations
+- Assessment page with sliders; results in three tabs: summary (gauge, contributing factors, recommendations), fuzzy detail (membership degrees, fired rules with strengths, aggregated output set with centroid) and forward-chaining trace per iteration
+- "How the Model Works" page: all membership functions, the 11 fuzzy rules with reasons, the 13 knowledge-base rules, a sensitivity chart and the worked example computed live
+- "Survey Data & Evaluation" page: CSV upload, validation, descriptive statistics, input distributions, Spearman correlation with bootstrap CI, category agreement, Cohen's kappa, confusion matrix, download of scored data
 - Runs locally. No database, login, external API or cloud backend.
 
 ## Fuzzy logic methodology
@@ -69,7 +69,10 @@ Survey data: *to be added once collected (n = …, collection period …).*
 ## Project structure
 
 ```
-├── app.py               Streamlit UI (presentation only)
+├── app.py               Streamlit entry point and page navigation
+├── pages/               UI pages: home, assessment, model, survey, about
+├── components/          Plotly charts and shared UI helpers
+├── .streamlit/          theme (config.toml)
 ├── fuzzy_model.py       Mamdani fuzzy inference (algorithmic core)
 ├── recommendation.py    forward-chaining knowledge base (algorithmic core)
 ├── evaluation.py        survey validation, agreement statistics, sensitivity, monotonicity

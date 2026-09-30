@@ -62,12 +62,12 @@ Values outside the range are clipped to the nearest bound.
 
 ## Dataset
 
-- `data/survey_data.csv`: real survey responses from students, anonymised as `R01`–`R05` (n = 5). The `group` column keeps the respondent's study-program/cohort code as written in the survey.
+- `data/survey_data.csv`: survey responses from students, anonymised as `R01`–`R20` (n = 20). R06–R20 answered the fatigue question on a 1–5 scale; their values were converted linearly to 1–10 with `1 + (x − 1) × 9/4`. The `group` column is left empty.
 - `data/dummy_survey_data.csv`: **DUMMY DATA**, 15 rows written by hand only to test the app. Not collected from students, not a research result. The app shows a red warning when this data is loaded.
 - `data/survey_template.csv`: header for the real survey export.
 - Column definitions and the matching survey questions: [`data/README.md`](data/README.md).
 
-Evaluation on `data/survey_data.csv` (n = 5): Spearman ρ = 0.79 (95% bootstrap CI −0.30 to 1.00), category agreement 40% (2 of 5), Cohen's κ = 0.12, MAE between the fuzzy index and the rescaled self-report = 12.4 points. With five respondents the confidence interval is very wide, so these numbers only show that the pipeline works; they are not evidence that the model is valid.
+Evaluation on `data/survey_data.csv` (n = 20): Spearman ρ = 0.90 (95% bootstrap CI 0.75 to 0.97), category agreement 75% (15 of 20), Cohen's κ = 0.62, MAE between the fuzzy index and the rescaled self-report = 11.5 points. Four of the five disagreements are one category apart with the model rating lower than the respondent (3 × MODERATE → LOW, 1 × HIGH → MODERATE). The sample is small and self-reported, and part of it was converted from a 1–5 scale, so these numbers describe agreement on this sample only.
 
 ## Screenshots
 
@@ -91,7 +91,7 @@ Evaluation on `data/survey_data.csv` (n = 5): Spearman ρ = 0.79 (95% bootstrap 
 
 ![How the model works](screenshots/05_how_the_model_works.png)
 
-**Survey Data & Evaluation: descriptive statistics** (`data/survey_data.csv`, n = 5)
+**Survey Data & Evaluation: descriptive statistics** (`data/survey_data.csv`, n = 20)
 
 ![Survey descriptive statistics](screenshots/06_survey_evaluation.png)
 

@@ -4,7 +4,7 @@
 |---|---|
 | `dummy_survey_data.csv` | **DUMMY DATA.** 15 rows invented by hand by the team only to test the app. Not collected from any student, not a research result. All IDs start with `DUMMY_`, and the app shows a red warning when it detects them. |
 | `survey_template.csv` | Empty template with the required header. |
-| `survey_data.csv` | Survey responses, anonymised as `R01`–`R20` (n = 20). R06–R20 rated fatigue on a 1–5 scale; converted to 1–10 with `1 + (x − 1) × 9/4` (1 → 1, 3 → 5.5, 5 → 10). Extra column `group` is left empty; the app ignores it. |
+| `survey_data.csv` | Survey responses, anonymised as `R01`–`R20` (n = 20). R06–R20 rated fatigue on a 1–5 scale; converted to 1–10 with `1 + (x − 1) × 9/4` (1 → 1, 3 → 5.5, 5 → 10). |
 
 ## Column definitions (must match the survey questions)
 

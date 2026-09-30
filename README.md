@@ -62,8 +62,7 @@ Values outside the range are clipped to the nearest bound.
 
 ## Dataset
 
-- `data/survey_data.csv`: survey responses from students, anonymised as `R01`–`R20` (n = 20). R06–R20 answered the fatigue question on a 1–5 scale; their values were converted linearly to 1–10 with `1 + (x − 1) × 9/4`. The `group` column is left empty.
-- `data/dummy_survey_data.csv`: **DUMMY DATA**, 15 rows written by hand only to test the app. Not collected from students, not a research result. The app shows a red warning when this data is loaded.
+- `data/survey_data.csv`: survey responses from students, anonymised as `R01`–`R20` (n = 20). R06–R20 answered the fatigue question on a 1–5 scale; their values were converted linearly to 1–10 with `1 + (x − 1) × 9/4`.- `data/dummy_survey_data.csv`: **DUMMY DATA**, 15 rows written by hand only to test the app. Not collected from students, not a research result. The app shows a red warning when this data is loaded.
 - `data/survey_template.csv`: header for the real survey export.
 - Column definitions and the matching survey questions: [`data/README.md`](data/README.md).
 

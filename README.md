@@ -3,6 +3,8 @@
 > **This system is an academic prototype and is not a medical diagnostic tool.**
 > Final Project — Artificial Intelligence, DTETI Universitas Gadjah Mada (2026).
 
+**Live demo:** https://student-fatigue-fuzzy.streamlit.app/ (hosted on Streamlit Community Cloud; if the app has been idle it may take a minute to wake up)
+
 ## Project overview
 
 A small web app that estimates a student's **Fatigue Index (0–100)** from four daily-habit indicators and suggests general well-being actions. It combines two AI techniques:
@@ -22,7 +24,7 @@ Students often notice fatigue only after short sleep, piling assignments, heavy 
 - Assessment page with sliders; results in three tabs: summary (gauge, contributing factors, recommendations), fuzzy detail (membership degrees, fired rules with strengths, aggregated output set with centroid) and forward-chaining trace per iteration
 - "How the Model Works" page: all membership functions, the 11 fuzzy rules with reasons, the 13 knowledge-base rules, a sensitivity chart and the worked example computed live
 - "Survey Data & Evaluation" page: CSV upload, validation, descriptive statistics, input distributions, Spearman correlation with bootstrap CI, category agreement, Cohen's kappa, confusion matrix, download of scored data
-- Runs locally. No database, login, external API or cloud backend.
+- Runs locally or on the live demo. No database, login or external API.
 
 ## Fuzzy logic methodology
 

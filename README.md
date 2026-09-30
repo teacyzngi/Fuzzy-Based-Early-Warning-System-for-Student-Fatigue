@@ -125,9 +125,9 @@ Small, self-reported survey sample; self-reported fatigue is a subjective refere
 
 | Name | NIM | Role |
 |---|---|---|
-| … | … | … |
-| … | … | … |
-| … | … | … |
+| Shofwah Syazwina | 24/536186/TK/59516 | Coding and presentation |
+| Nadia Santoso | 24/545545/TK/60695 | Report making |
+| Aaliyah Barakatullah Asura | 24/545603/TK/60709 | PowerPoint making |
 
 ## Citation
 
@@ -136,4 +136,4 @@ Small, self-reported survey sample; self-reported fatigue is a subjective refere
 - Zadeh, L. A. (1965). Fuzzy sets. *Information and Control*, 8(3), 338–353.
 - Russell, S., & Norvig, P. (2021). *Artificial Intelligence: A Modern Approach* (4th ed.). Pearson.
 
-AI tools were used to help scaffold the user interface and boilerplate code, as allowed by the course policy. The problem formalization, rule base and parameter choices were reviewed and are defended by the team.
+The problem formalization, rule base and parameter choices were reviewed and are defended by the team.

@@ -37,9 +37,9 @@ st.subheader("Anggota tim")
 st.markdown("""
 | Nama | NIM | Peran |
 |---|---|---|
-| … | … | … |
-| … | … | … |
-| … | … | … |
+| Shofwah Syazwina | 24/536186/TK/59516 | Coding dan presentasi |
+| Nadia Santoso | 24/545545/TK/60695 | Pembuatan laporan |
+| Aaliyah Barakatullah Asura | 24/545603/TK/60709 | Pembuatan PowerPoint |
 """)
 
 st.subheader("Referensi")

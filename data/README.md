@@ -4,7 +4,7 @@
 |---|---|
 | `dummy_survey_data.csv` | **DUMMY DATA.** 15 rows invented by hand by the team only to test the app. Not collected from any student, not a research result. All IDs start with `DUMMY_`, and the app shows a red warning when it detects them. |
 | `survey_template.csv` | Empty template with the required header. |
-| `survey_data.csv` | *(not in the repo yet)* Put the real, anonymised survey export here once collected. |
+| `survey_data.csv` | Real survey responses, anonymised as `R01`–`R05` (n = 5). Extra column `group` = study-program/cohort code as written by the respondent; the app ignores it. |
 
 ## Column definitions (must match the survey questions)
 

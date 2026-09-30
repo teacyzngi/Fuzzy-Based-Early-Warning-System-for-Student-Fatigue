@@ -60,11 +60,46 @@ Values outside the range are clipped to the nearest bound.
 
 ## Dataset
 
+- `data/survey_data.csv`: real survey responses from students, anonymised as `R01`–`R05` (n = 5). The `group` column keeps the respondent's study-program/cohort code as written in the survey.
 - `data/dummy_survey_data.csv`: **DUMMY DATA**, 15 rows written by hand only to test the app. Not collected from students, not a research result. The app shows a red warning when this data is loaded.
 - `data/survey_template.csv`: header for the real survey export.
 - Column definitions and the matching survey questions: [`data/README.md`](data/README.md).
 
-Survey data: *to be added once collected (n = …, collection period …).*
+Evaluation on `data/survey_data.csv` (n = 5): Spearman ρ = 0.79 (95% bootstrap CI −0.30 to 1.00), category agreement 40% (2 of 5), Cohen's κ = 0.12, MAE between the fuzzy index and the rescaled self-report = 12.4 points. With five respondents the confidence interval is very wide, so these numbers only show that the pipeline works; they are not evidence that the model is valid.
+
+## Screenshots
+
+**Home**
+
+![Home page](screenshots/01_home.png)
+
+**Assessment: summary** (worked example input: sleep 7.5 h, 7 assignments, 4 h screen time, 2.5 meals/day → index 42.9, MODERATE)
+
+![Assessment summary](screenshots/02_assessment_summary.png)
+
+**Assessment: fuzzy detail** (membership degrees, fired rules, aggregated output set and centroid)
+
+![Fuzzy detail](screenshots/03_assessment_fuzzy_detail.png)
+
+**Assessment: forward-chaining trace**
+
+![Forward chaining trace](screenshots/04_assessment_forward_chaining.png)
+
+**How the Model Works** (membership functions)
+
+![How the model works](screenshots/05_how_the_model_works.png)
+
+**Survey Data & Evaluation: descriptive statistics** (`data/survey_data.csv`, n = 5)
+
+![Survey descriptive statistics](screenshots/06_survey_evaluation.png)
+
+**Survey Data & Evaluation: agreement with self-reported fatigue**
+
+![Survey agreement](screenshots/06b_survey_agreement.png)
+
+**About & Limitations**
+
+![About and limitations](screenshots/07_about_limitations.png)
 
 ## Project structure
 
@@ -89,14 +124,31 @@ Survey data: *to be added once collected (n = …, collection period …).*
 Requires Python 3.9+.
 
 ```bash
-git clone <this-repo-url>
-cd student-fatigue-fuzzy
+git clone https://github.com/teacyzngi/Fuzzy-Based-Early-Warning-System-for-Student-Fatigue.git
+cd Fuzzy-Based-Early-Warning-System-for-Student-Fatigue
 python -m venv .venv
-# Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
+```
+
+Activate the virtual environment:
+
+| Shell | Command |
+|---|---|
+| Windows PowerShell | `.venv\Scripts\Activate.ps1` |
+| Windows Command Prompt | `.venv\Scripts\activate.bat` |
+| Git Bash (Windows) | `source .venv/Scripts/activate` |
+| macOS / Linux | `source .venv/bin/activate` |
+
+Then install the dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
+If PowerShell blocks the activation script, skip activation and call the venv's Python directly, e.g. `.venv\Scripts\python -m pip install -r requirements.txt` and `.venv\Scripts\python -m streamlit run app.py`.
+
 ## Running
+
+With the virtual environment active:
 
 ```bash
 streamlit run app.py          # web app, opens http://localhost:8501
